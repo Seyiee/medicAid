@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedicAid</title>
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+<header>
+   <!--Navigation Begins-->
+   <nav class="navbar">
+    <div class="logo">
+      <a href="./index.html"><img src="./images/logo.jpg" alt="logo" width="124px"></a>
+    </div>
+      <label for="btn" class="menu-bar">
+        <i class="fa fa-bars"></i>
+      </label>
+      <input type="checkbox" id="btn">
+      <ul class="nav-item">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="./covid19.medicaidradiology.com/">Covid19</a></li>
+        <li>
+          <label for="btn-1" class="show">Services <i class="fas fa-caret-down"></i></label>
+          <a href="Services.html">Services</a>
+          <input type="checkbox" id="btn-1">
+          <ul class="dropdown">
+            <li><a href="Radiology.html">Radiology</a></li>
+            <li><a href="Laboratory.html">Laboratory Services</a></li>
+            <li><a href="Medicalscreening.html">Medical Screening</a></li>
+            <li><a href="Specialconsultation.html">Special Consultation</a></li>
+            <li><a href="Otherservices.html">Other Services</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="testimonials.html">Testimonial</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <label for="btn-2" class="show">Client <i class="fas fa-caret-down"></i></label>
+          <a href="#">
+            Client
+          </a>
+          <input type="checkbox" id="btn-2">
+          <ul class="dropdown">
+            <li><a href="Bookappointment.html">Book Appointment</a></li>
+            <li><a href="Requestresult.html">Request Result</a></li>
+            <!--<li><a href="Payonline.html">Pay Online</a></li>-->
+          </ul>
+        </li>
+      </ul>
+
+  </nav>
+<!--End of Navigation--> 
+<div class="Appointment-banner banner-text">
+<h1>Book Appointment</h1>
+</div>
+</header>
+
+<main id="Book-appointment">
+<div class="appointment-container">
+<div class="Appointment-left-item">
+<img src="./images/pointing_doctor-removebg-preview.png" alt="">
+</div>
+<div class="Appointment-right-item">
+<form action="">
+      <div class="appt-heading">
+        <h1>Make An Appointment</h1>
+      </div>
+     <div class="form-body">
+
+      <div id="Patient-name" >
+        
+        <input type="text" id="Full name" placeholder="Client Name" required>
+      </div>
+
+
+      <div>
+        
+        <input type="text" id="Registration-No" placeholder="Registration No">
+      </div>
+
+      <div class="field-split form-row">
+        <div class="field-align-left">
+          
+          <input type="text" placeholder="Phone Number">
+        
+        </div>
+          <div class="field-align-right">
+            <input type="text" placeholder="Email" required>
+          </div>
+        
+      </div>
+
+      <div class="field-split form-row">
+        <div>
+
+        <select name="Gender" id="client-gender" required>
+            <option value="">Male</option>
+            <option value="">Female</option>
+
+        </select>
+        </div>
+        <div id="patient-status">
+        
+          <select name="client-status" id="client-status" required>
+              <option value="">--Please choose an option--</option>
+              <option value="new patient">New patient</option>
+              <option value="Returning patient">Returning patient</option>
+          </select>
+        </div>
+      </div>
+  
+      <div id="service">
+        <select name="services" id="service" required>
+            <option value="">--Select Service--</option>
+            <option value="">Radiology</option>
+            <option value="">Laboratory testing</option>
+            <option value="">Medical screening</option>
+            <option value="">Special consultation</option>
+            <option value="">Eclectrocardiogram</option>
+            <option value="">Computed Tomography Scan</option>
+            <option value="">Magnetic Resonance Imaging </option>
+            <option value="">Fluoroscopy</option>
+            <option value="">Ultrasound Scan</option>
+            <option value="">Echocardiogram</option>
+            <option value="">Endoscopy</option>
+            <option value="">Mammogram</option>
+            <option value="">PCR service</option>
+            <option value="">Wellness Clinic</option>
+            <option value="">Pre-marital Medical Screening</option>
+        
+        </select>
+      </div>
+
+      <div id="date">
+        <input type="date" placeholder="dd/mm/yy" required>
+      </div>
+      
+     </div>
+       <div>
+         <input type="submit" value="BOOK APPOINTMENT">
+       </div>
+
+  </form>
+</div>
+
+</div>
+</main>
+<!-- Footer -->
+
+<footer class="footer-section">
+<div class="footer">
+
+<div class="footer-container">
+
+<div class="footer-link about">
+  <a href="./index.html"><img src="./images/logo.jpg" alt="logo" width="124px"></a>
+  <p>No 2 Libreville Street Off Aminu Kano <br>
+    Crescent Wuse 2 Abuja</p>
+</div>
+
+<div class="footer-link footer-services">
+  <div class="footer-services-title">
+    <h3>Services</h3>
+  </div>
+  <ul>
+    <li><a href="Radiology.html">Radiology</a></li>
+    <li><a href="Laboratory.html">Laboratory Service</a></li>
+    <li><a href="Medicalscreening.html">Medical Screening</a></li>
+    <li><a href="Specialconsultation.html">Special Consultation</a></li>
+    <li><a href="Otherservices.html">Other Services</a></li>
+  </ul>
+</div>
+
+<div class="footer-link menu-links">
+  <div class="footer-services-title">
+    <h3>Menu Links</h3>
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Services.html">Our Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    
+  </ul>
+  
+</div>
+
+<div class="footer-link menu-links">
+  <div class="footer-services-title">
+    <h3>Menu Links</h3>
+  </div>
+
+  <ul>
+    <li><a href="Bookappointment.html">Book Appointment</a></li>
+    <!--<li><a href="Payonline.html">Pay Online</a></li>-->
+    <li><a href="Requestresult.html">Request Result</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    
+  </ul>
+</div>
+
+
+ <div class="footer-link footer-social">
+    <div><h3>Follow us</h3></div>
+    <a href="https://web.facebook.com/MedicaidRD" target="_blank"><i class="fab fa-facebook-f facebook-bg"></i></a>
+    <a href="https://twitter.com/medicaidrd" target="_blank"><i class="fab fa-twitter twitter-bg"></i></a>
+    <a href="http://www.medicaidradiology.com/" target="_blank" class="google-social"><i class="fab fa-google-plus-g google-bg"></i></a>
+    <a href="https://www.instagram.com/medicaidrd" target="_blank" class="instagram-social"><i class="fab fa-instagram"></i></a>
+</div>
+
+</div>
+<div class="footer-bottom">
+Copyright &copy; medicaid all rights reserved 
+</div>
+</div>
+
+</footer>
+<!-- Footer -->
+
+<script src="/script.js"></script>
+</body>   
+</html>       

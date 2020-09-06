@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedicAid</title>
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+  <header>
+      <!--Navigation Begins-->
+              <nav class="navbar">
+                <div class="logo">
+                  <a href="./index.html"><img src="./images/logo.jpg" alt="logo" width="124px"></a>
+                </div>
+                  <label for="btn" class="menu-bar">
+                    <i class="fa fa-bars"></i>
+                  </label>
+                  <input type="checkbox" id="btn">
+                  <ul class="nav-item">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="./covid19.medicaidradiology.com/">Covid19</a></li>
+                    <li>
+                      <label for="btn-1" class="show">Services <i class="fas fa-caret-down"></i></label>
+                      <a href="Services.html">Services</a>
+                      <input type="checkbox" id="btn-1">
+                      <ul class="dropdown">
+                        <li><a href="Radiology.html">Radiology</a></li>
+                        <li><a href="Laboratory.html">Laboratory Services</a></li>
+                        <li><a href="Medicalscreening.html">Medical Screening</a></li>
+                        <li><a href="Specialconsultation.html">Special Consultation</a></li>
+                        <li><a href="Otherservices.html">Other Services</a></li>
+                      </ul>
+                    </li>
+                    
+                    <li><a href="testimonials.html">Testimonial</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                      <label for="btn-2" class="show">Client <i class="fas fa-caret-down"></i></label>
+                      <a href="#">
+                        Client
+                      </a>
+                      <input type="checkbox" id="btn-2">
+                      <ul class="dropdown">
+                        <li><a href="Bookappointment.html">Book Appointment</a></li>
+                        <li><a href="Requestresult.html">Request Result</a></li>
+                        <!--<li><a href="Payonline.html">Pay Online</a></li>-->
+                      </ul>
+                    </li>
+                  </ul>
+  
+              </nav>
+           <!--End of Navigation-->
+      
+       <div class="contact-banner banner-text">
+                  <h1>Contact</h1>
+          </div>
+  </header>
+         
+  
+      <section id="contact">
+      <div class="contact-card">
+                  <div class="contact-card-item">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <h3>Address</h3>
+                      <p>No 2 Libreville Street, Off Aminu Kano Crescent Wuse 2 Abuja. </p>
+                  </div>
+                  <div class="contact-card-item">
+                    <i class="fas fa-phone-alt"></i>
+                      <h3>Phone</h3>
+                      <p>(+234) 7030044300</p>
+                  </div>
+                  <div class="contact-card-item">
+                    <i class="fas fa-envelope"></i>
+                      <h3>Mail</h3>
+                      <p><a href="mailto:info@medicaidradiology.com">info@medicaidradiology.com</a></p>
+                  </div>
+      </div>
+      </section>
+  
+  <section class="map-section">
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.8480074345634!2d7.45995451478696!3d9.077607993487097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0ae70491c531%3A0x5656c30545dfc399!2s2%20Libreville%20Cres%2C%20Wuse%2C%20Abuja!5e0!3m2!1sen!2sng!4v1591646768924!5m2!1sen!2sng" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe class="contact-grid-item">
+      </div>
+  </section>
+            
+  <section id="get-in-touch">
+              
+  <div id="get-in-touch-content">
+  
+    <div class="in-touch-heading">
+      <h1>Get in touch with us</h1>
+    </div>
+          
+    <div id="error-message"></div>
+    <div class="contact-form">
+      <form onsubmit="event.preventDefault(); validation()">
+        <div class="contact-form-content">
+          <input type="text" id="name" placeholder="Enter your fullname">
+        </div>
+         <div class="contact-form-content">
+          <input id="email" type="text" placeholder="Email" >
+        </div>
+        <div class="contact-form-content">
+          <textarea  id="message" placeholder="Your Message"></textarea>
+        </div>
+        <div class="submit-btn">
+          <input type="submit" value="Send">
+        </div>
+    </form>
+    </div>
+  </div>
+  </section>
+  
+  <!-- Footer -->
+  
+  <footer class="footer-section">
+    <div class="footer">
+  
+        <div class="footer-container">
+  
+          <div class="footer-link about">
+            <a href="./index.html"><img src="./images/logo.jpg" alt="logo" width="124px"></a>
+              <p>No 2 Libreville Street Off Aminu Kano <br>
+                Crescent Wuse 2 Abuja</p>
+            </div>
+            
+            <div class="footer-link footer-services">
+              <div class="footer-services-title">
+                <h3>Services</h3>
+              </div>
+              <ul>
+                <li><a href="Radiology.html">Radiology</a></li>
+                <li><a href="Laboratory.html">Laboratory Service</a></li>
+                <li><a href="Medicalscreening.html">Medical Screening</a></li>
+                <li><a href="Specialconsultation.html">Special Consultation</a></li>
+                <li><a href="Otherservices.html">Other Services</a></li>
+              </ul>
+            </div>
+  
+            <div class="footer-link menu-links">
+              <div class="footer-services-title">
+                <h3>Menu Links</h3>
+              </div>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Our Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                
+              </ul>
+              
+            </div>
+  
+            <div class="footer-link menu-links">
+              <div class="footer-services-title">
+                <h3>Menu Links</h3>
+              </div>
+            
+              <ul>
+                <li><a href="Bookappointment.html">Book Appointment</a></li>
+                <!--<li><a href="Payonline.html">Pay Online</a></li>-->
+                <li><a href="Requestresult.html">Request Result</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                
+              </ul>
+            </div>
+           
+  
+             <div class="footer-link footer-social">
+                <div><h3>Follow us</h3></div>
+                <a href="https://web.facebook.com/MedicaidRD" target="_blank"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="https://twitter.com/medicaidrd" target="_blank"><i class="fab fa-twitter twitter-bg"></i></a>
+                <a href="http://www.medicaidradiology.com/" target="_blank" class="google-social"><i class="fab fa-google-plus-g google-bg"></i></a>
+                <a href="https://www.instagram.com/medicaidrd" target="_blank" class="instagram-social"><i class="fab fa-instagram"></i></a>
+            </div>
+           
+  </div>
+  <div class="footer-bottom">
+          Copyright &copy; medicaid all rights reserved 
+  </div>
+  </div>
+        
+  </footer>
+  <!-- Footer -->
+  <script src="script.js"></script> 
+  </body>
+</html>

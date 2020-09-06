@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/favicon.png">
+    <title>MedicAid</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+</head>
+<body>
+    <!--Header-->
+        <header>
+         <div id="topbar">
+                <ul className="topbar-contact">
+                    <li><a href="mailto:info@medicaidradiology.com"><i class="fa fa-envelope"></i>info@medicaidradiology.com</a></li>
+                    <li><i class="fa fa-phone"></i> (+234) 7030044300</li>
+            </ul>
+           
+            <ul className="topbar-social">
+            
+            <li> <a href="https://web.facebook.com/MedicaidRD" target="_blank" class="facebook-social"><i class="fab fa-facebook"></i></a></i></li>
+            <li> <a href="https://twitter.com/medicaidrd" target="_blank" class="twitter-social"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/medicaidrd" target="_blank" class="instagram-social"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="http://www.medicaidradiology.com/" target="_blank" class="google-social"><i class="fab fa-google"></i></a></li>
+            
+            </ul>                   
+            </div>
+
+           <!--Navigation Begins-->
+            <nav class="navbar">
+              <div class="logo">
+                <a href="./index.html"><img src="./images/logo.jpg" alt="logo" width="124px"></a>
+              </div>
+                <label for="btn" class="menu-bar">
+                  <i class="fa fa-bars"></i>
+                </label>
+                <input type="checkbox" id="btn">
+                <ul class="nav-item">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="About.html">About</a></li>
+                  <li><a href="./covid19.medicaidradiology.com/">Covid19</a></li>
+                  <li>
+                    <label for="btn-1" class="show">Services <i class="fas fa-caret-down"></i></label>
+                    <a href="Services.html">Services</a>
+                    <input type="checkbox" id="btn-1">
+                    <ul class="dropdown">
+                      <li><a href="Radiology.html">Radiology</a></li>
+                      <li><a href="Laboratory.html">Laboratory Services</a></li>
+                      <li><a href="Medicalscreening.html">Medical Screening</a></li>
+                      <li><a href="Specialconsultation.html">Special Consultation</a></li>
+                      <li><a href="Otherservices.html">Other Services</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li><a href="testimonials.html">Testimonial</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li>
+                    <label for="btn-2" class="show">Client <i class="fas fa-caret-down"></i></label>
+                    <a href="#">
+                      Client
+                    </a>
+                    <input type="checkbox" id="btn-2">
+                    <ul class="dropdown">
+                      <li><a href="Bookappointment.html">Book Appointment</a></li>
+                      <li><a href="Requestresult.html">Request Result</a></li>
+                      <!--<li><a href="Payonline.html">Pay Online</a></li>-->
+                    </ul>
+                  </li>
+                </ul>
+
+            </nav>
+         <!--End of Navigation-->
+         <div class="slideshowContainer">
+  
+            <div class="slide-content">
+              <div class="bounce-animation"><p>We Offer High Quality Medical Services</p>
+              <a href="Bookappointment.html">Book Appointment</a></div>
+              <div class="imageSlides slide1"></div>
+              <div class="imageSlides slide2"></div>
+              <div class="imageSlides slide3"></div>
+            </div>
+           
+          
+            <span id ="leftArrow" class="slideshowArrow"></span>
+            <span id ="rightArrow" class="slideshowArrow"></span>
+            
+            <div class="slideshowCircles">
+              <span class="circle dot"></span>
+              <span class="circle"></span>
+              <span class="circle"></span>
+            </div>
+            
+          </div>
+         
+
+        </header>
+    <!--End of Header-->
+
+    
+<!--Background Image Section-->
+    <div class="three-section">
+
+      <!--Welcome Section Begins-->
+      <section id="Hero">
+        <div class="card text-center" id="welcome">
+          <div class="card-body">
+            <h1><span>Welcome</span> to Medicaid Radio-Diagnostic Center</h1>
+              <p class="welcome-text">A New Era in Radio-diagnostics</p>
+              <p>We are dedicated to improving the standard of diagnostic services in Nigeria. Medicaid Radio-Diagnostic Cente is born out of a passion to be the forerunner in the provision of radiological and diagnostic services.</p>
+            
+          </div>
+        </div>
+      </section>
+  
+      <!--Welcome Section Ends-->
+
+      <!--Services Section in Home-->
+      <section id="home-services">
+        <div class="service-container">
+            <h1>Our Top Services</h1>
+           <div class="home-services-content">
+            
+            <div class="home-services-item">
+                <h5><i class="fas fa-heartbeat"></i> Radiology</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+
+              <div class="home-services-item">
+                <h5><i class="fas fa-microscope"></i> Laboratory Sercvice</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+                    
+               
+               <div class="home-services-item">
+                <h5><i class="fas fa-stethoscope"></i>Medical Screening</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            
+           
+              <div class="home-services-item">
+                <h5><i class="fas fa-pills"></i>  Special Consultation</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                
+               </div>
+  
+      <div class="home-services-item">
+          <h5><i class="fas fa-x-ray"></i>Digital Xray</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+            
+            
+      <div class="home-services-item">
+          <h5> <i class="fas fa-user-md"></i>Mammogram</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+
+    </div>
+           
+              
+            
+  </div>
+</section>
+
+ <!--Services Section in Home Ends-->
+
+  <!--Why Choose Us Section-->
+
+<section class="chooseUs">
+        
+  <div><h1>Why Choose Us</h1></div>
+
+  <div class= "choose-center">
+  
+    <div class="choose-item">
+            <i class="fas fa-procedures"></i>
+          <h3>General Treatment</h3>
+    </div>
+        
+    <div class="choose-item">
+        <i class="fas fa-briefcase-medical"></i>
+        <h3>Experience</h3>
+    </div>
+
+    <div class="choose-item">
+        <i class="fas fa-file-medical-alt"></i>
+        <h3>Easy Booking</h3>
+    </div>
+
+    <div class="choose-item">
+        <i class="fas fa-ambulance"></i>
+        <h3>Emergency</h3>
+    </div>
+
+  </div>
+</section>
+<!--Why Choose Us Section-->
+
+</div>
+
+<section id="team">
+  <div class="team-heading">
+    <h1>Our Core Team</h1>
+    <h4>Medical Specialist</h4>
+  </div>
+  <div class="team-grid-container">
+    <div class="team-image">
+      <img src="./images/herExcellency.jpg" width="200rem" alt="Director">
+      <h3>Dr. Zainab Shinkafi Bagudu</h3>
+      <p>Director</p>
+    </div>
+    <div class="team-image">
+      <img src="./images/team member.jpeg" width="250rem" alt="Doctor">
+      <h3>Dr. Omoragbon Aishatu</h3>
+      <p>Head Clinicals</p>
+    </div>
+    <div class="team-image">
+      <img src="./images/team member2.JPG" width="100rem" alt="Doctor">
+      <h3></h3>
+      <p></p>
+    </div>
+  </div>
+
+</section>
+
+<section class="counter-section">
+  <div class= "counter-container">
+  <div class="counter-row">
+    <p class="count-num">200,000</p>
+      <p>Services Offered</p>
+  </div>
+  <div class="counter-row">
+      <p class="count-num">100,000</p>
+      <p>Happy Clients</p>
+  </div>
+  <div class="counter-row">
+    <p class="count-num">10</p>
+      <p>Years of Experience</p>
+  </div>
+  <div class="counter-row">
+    <p class="count-num">3</p>
+      <p>Locations</p>
+  </div</>
+</section>
+
+<!--Newsletter Section-->
+<section classs="newsletter-section">
+  <div class="home-newsletter">
+    <i class="fas fa-envelope-open"></i>
+        <h1>Newsletter</h1>
+        <p>
+          Stay up to date with our latest news
+        </p>
+       <form onsubmit="event.preventDefault(); subscribe()">
+        <div id="error-message"></div>
+        <div>
+          <input id="email" type="text" >
+        </div>
+      <div>
+        <input type="submit" value="Subscribe">
+      </div>       
+      </form>
+  </div>
+</section>
+<!--Newsletter Section-->
+<section class="testimonials">
+  <div class="testimonial-container">
+    <div class="testimonial-title">
+      <h1>What Our Cients Says</h1>
+    </div>
+    <div class="testimonial-slider">
+
+            <div class="testimonial-slide active">
+              <p>
+               " Very efficient facility. The receptionist, Franca,
+                was super efficient, friendly and helpful, all the 
+                while busy and multitasking. I was in and out within 
+                a short amount of time. "
+              </p>
+              <div class="client">
+                <h3>Victoria Enwemadu</h3>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <p>
+                " Thanks for the scan, You showed that medical profession 
+                is the one you enjoy, you carried out your job with enthusiasm. 
+                You mad me so comfortable, which help me to relax and ask questions.
+                Thank you, keept it up and God bless you. "
+              </p>
+              <div class="client">
+               <h3>OOWO AMEH</h3>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <p>
+                " The management of this hospital takes your health serious. "
+              </p>
+              <div class="client">
+                  <h3>ISRAEL RESONANCE</h3>
+              </div>
+            </div>
+          </div>
+      <div class="testimonial-indicator">
+        <img src="./images/team member1.JPG" class="active" alt="client1" data-id="0">
+        <img src="./images/team member2.JPG" alt="client2" data-id="1">
+        <img src="./images/IMG_7637.jpg" alt="client3" data-id="2">
+    </div>
+
+  </div>
+</section>
+
+<section id="address-section">
+ <div class="address-container">
+  <div class="address-item">
+    <div><i class="fas fa-map-marker-alt"></i></div>
+    <div >
+      <h3>Find us</h3>
+      <p>No 2 Libreville Street Off Aminu <br>Kano Crescent Wuse 2 Abuja</p>
+    </div>  
+   </div>
+  
+   <div class="address-item">
+  <div> <i class="fas fa-phone"></i></div>
+    <div >
+      <h3>Call us</h3>
+      <p> (+234)7030044300</p>
+    </div>  
+   </div>
+  
+   <div class="address-item">
+    <div> <i class="far fa-envelope-open"></i></div>
+    <div >
+      <h3>Mail us</h3>
+      <a href="mailto:info@medicaidradiology.com">info@medicaidradiology.com</a>
+    </div>  
+   </div>
+ </div>
+</section>
+
+
+
+
+<!-- Footer -->
+
+<footer class="footer-section">
+  <div class="footer">
+
+      <div class="footer-container">
+
+        <div class="footer-link about">
+          <a href="./index.html"><img src="./images/logo.jpg" alt="logo" width="124px"></a>
+            <p>No 2 Libreville Street Off Aminu Kano <br>
+              Crescent Wuse 2 Abuja</p>
+          </div>
+          
+          <div class="footer-link footer-services">
+            <div class="footer-services-title">
+              <h3>Services</h3>
+            </div>
+            <ul>
+              <li><a href="Radiology.html">Radiology</a></li>
+              <li><a href="Laboratory.html">Laboratory Service</a></li>
+              <li><a href="Medicalscreening.html">Medical Screening</a></li>
+              <li><a href="Specialconsultation.html">Special Consultation</a></li>
+              <li><a href="Otherservices.html">Other Services</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-link menu-links">
+            <div class="footer-services-title">
+              <h3>Menu Links</h3>
+            </div>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="Services.html">Our Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              
+            </ul>
+            
+          </div>
+
+          <div class="footer-link menu-links">
+            <div class="footer-services-title">
+              <h3>Menu Links</h3>
+            </div>
+          
+            <ul>
+              <li><a href="Bookappointment.html">Book Appointment</a></li>
+              <!--<li><a href="Payonline.html">Pay Online</a></li>-->
+              <li><a href="Requestresult.html">Request Result</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              
+            </ul>
+          </div>
+         
+
+           <div class="footer-link footer-social">
+              <div><h3>Follow us</h3></div>
+              <a href="https://web.facebook.com/MedicaidRD" target="_blank"><i class="fab fa-facebook-f facebook-bg"></i></a>
+              <a href="https://twitter.com/medicaidrd" target="_blank"><i class="fab fa-twitter twitter-bg"></i></a>
+              <a href="http://www.medicaidradiology.com/" target="_blank" class="google-social"><i class="fab fa-google-plus-g google-bg"></i></a>
+              <a href="https://www.instagram.com/medicaidrd" target="_blank" class="instagram-social"><i class="fab fa-instagram"></i></a>
+          </div>
+         
+</div>
+<div class="footer-bottom">
+        Copyright &copy; medicaid all rights reserved 
+</div>
+</div>
+      
+</footer>
+<!-- Footer -->
+    
+
+  <!--------Counter-------->  
+   
+ <script src="script.js"></script>
+ <script>
+ $(".count-num").counterUp({duration:50})
+</script>
+</body>
+</html>
