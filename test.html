@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reg No: </h1> <br> <p>${regNo}</p>
+    <div style="display: grid; grid-template-columns: 1em 1em;"><h4 style="color: rgb(121, 152, 255);  ;">Client Name: </h4> <p style="padding-left: 2%;">${clientName}</p></div>
+    <h3 style="color: black);">Client Name: </h3> <p>${clientName}</p>
+
+    <table>
+        <tr> <th style="color: rgb(0, 58, 248);">Name:</th><td>${Name}</td></tr>
+        <tr><th style="color: rgb(0, 58, 248);">Email:</td><td>${email}</td></th>
+        <tr> <th style="color: rgb(0, 58, 248);">Messages:</td><td>${messages}</td></tr>
+      </table>
+      <h3 style="color: rgb(0, 58, 248);">Name: </h3> <h3 margin-left: 50px;>${Name}</h3>
+
+
+      <a href="#openModal-about">Modal</a>
+<!--modals-->
+  <div id="openModal-about" class="modalDialog">
+      <div>
+         <a href="#close" title="Close" class="close">X</a>
+         <h2>Modal</h2>
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+       </div>
+   </div>
+
+
+   <style>
+       * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 100ms ease-in;
+    -moz-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 3px;
+    background: #fff;
+}
+.close {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f26d7d;
+    color: #fff;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 34px;
+    height: 34px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+    padding-top: 5px;
+}
+.close:hover {
+    background: #fa3f6f;
+}
+
+   </style>
+
+</body>
+</html>

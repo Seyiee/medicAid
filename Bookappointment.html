@@ -7,6 +7,56 @@
     <link rel="icon" href="./images/favicon.png">
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+  
+    <style>
+
+      #modal{
+        position: fixed;
+        top: 150px;
+        z-index: 2;
+        width:80%;
+        max-width: 300px;
+        min-width: 300px;
+        height: 260px;
+        overflow: hidden;
+        background: #fff;
+        margin: 0 auto;
+        left:0;
+        right:0;
+        background-image: url(ft.png);
+        box-shadow:2px 4px 30px #000;
+        color:#fff;
+        font-family:arial;
+        display:none;
+        opacity:0;
+        transform: scale(0);
+      }
+      
+      
+      .btn-close{
+        padding-right: 10%;
+        position:absolute;
+        right:0;
+        cursor:pointer;
+        font-size:26px;
+        width:16px;
+        color: blue;
+      }
+      
+      .btn-open{
+        box-shadow:2px 2px 8px #aaa;
+      }
+      .overlay{
+        width:100%;
+        height:100%;
+        background:rgba(255,255,255,.8);
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1;
+      }
+          </style>
+          
 </head>
 <body>
     
@@ -67,7 +117,7 @@
 <img src="./images/pointing_doctor-removebg-preview.png" alt="">
 </div>
 <div class="Appointment-right-item">
-<form action="">
+<form id="appointmentForm" >
       <div class="appt-heading">
         <h1>Make An Appointment</h1>
       </div>
@@ -75,39 +125,60 @@
 
       <div id="Patient-name" >
         
-        <input type="text" id="Full name" placeholder="Client Name" required>
+        <input  type="text" id="ClientName" placeholder="Client Name" required>
       </div>
 
 
       <div>
         
-        <input type="text" id="Registration-No" placeholder="Registration No">
+        <input type="text" id="RegNo" placeholder="Registration No">
       </div>
 
       <div class="field-split form-row">
         <div class="field-align-left">
           
-          <input type="text" placeholder="Phone Number">
+          <input id="Phone" type="text" placeholder="Phone Number">
         
         </div>
           <div class="field-align-right">
-            <input type="text" placeholder="Email" required>
+            <input id="email" type="text" placeholder="Email" required>
           </div>
         
       </div>
 
       <div class="field-split form-row">
-        <div>
 
-        <select name="Gender" id="client-gender" required>
+        <!-- Bug -->
+        <!-- <div>
+
+        <select name="Gender" id="clientgender" required>
+          <option value="">Gender</option>
             <option value="">Male</option>
             <option value="">Female</option>
 
         </select>
+        </div> -->
+
+        <!-- <div id="">
+        
+          <select name="clientgender" id="clientgender" required>
+            <option value="">Gender</option>
+            <option value="">Male</option>
+            <option value="">Female</option>
+          </select>
+        </div> -->
+
+        <div id="patient-gender">
+        
+          <select name="client" id="clientgender" required>
+              <option value="">Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+          </select>
         </div>
         <div id="patient-status">
         
-          <select name="client-status" id="client-status" required>
+          <select name="client-status" id="clientstatus" required>
               <option value="">--Please choose an option--</option>
               <option value="new patient">New patient</option>
               <option value="Returning patient">Returning patient</option>
@@ -115,41 +186,67 @@
         </div>
       </div>
   
-      <div id="service">
-        <select name="services" id="service" required>
+      <div id="services">
+        <select name="service" id="service" required>
             <option value="">--Select Service--</option>
-            <option value="">Radiology</option>
-            <option value="">Laboratory testing</option>
-            <option value="">Medical screening</option>
-            <option value="">Special consultation</option>
-            <option value="">Eclectrocardiogram</option>
-            <option value="">Computed Tomography Scan</option>
-            <option value="">Magnetic Resonance Imaging </option>
-            <option value="">Fluoroscopy</option>
-            <option value="">Ultrasound Scan</option>
-            <option value="">Echocardiogram</option>
-            <option value="">Endoscopy</option>
-            <option value="">Mammogram</option>
-            <option value="">PCR service</option>
-            <option value="">Wellness Clinic</option>
-            <option value="">Pre-marital Medical Screening</option>
+            <option value="Radiology">Radiology</option>
+            <option value="Laboratory testing">Laboratory testing</option>
+            <option value="Medical screening">Medical screening</option>
+            <option value="Special consultation">Special consultation</option>
+            <option value="Eclectrocardiogram">Eclectrocardiogram</option>
+            <option value="Computed Tomography Scan">Computed Tomography Scan</option>
+            <option value="Magnetic Resonance Imaging">Magnetic Resonance Imaging </option>
+            <option value="Fluoroscopy">Fluoroscopy</option>
+            <option value="Ultrasound Scan">Ultrasound Scan</option>
+            <option value="Echocardiogram">Echocardiogram</option>
+            <option value="Endoscopy">Endoscopy</option>
+            <option value="Mammogram">Mammogram</option>
+            <option value="PCR service">PCR service</option>
+            <option value="Wellness Clinic">Wellness Clinic</option>
+            <option value="Pre-marital Medical Screening">Pre-marital Medical Screening</option>
         
         </select>
       </div>
 
       <div id="date">
-        <input type="date" placeholder="dd/mm/yy" required>
+        <input id="time" type="date" placeholder="dd/mm/yy" required>
       </div>
       
      </div>
        <div>
-         <input type="submit" value="BOOK APPOINTMENT">
+         <input class="btn-open" type="submit" value="BOOK APPOINTMENT">
        </div>
 
   </form>
-</div>
+  
+  <div id="modal">
+    <div class="btn-close">x<div>
+  </div>
+  <!-- partial -->
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+  
+  <script>
+    var animate;
+  
+  $('.btn-open').on('click',function(e){
+    //e.stopImmediatePropagation();
+    $('body').append("<div class='overlay'></div>");
+    animate = TweenMax.to(modal,1,{autoAlpha:1,display:"block",scale:1})
+  });
+  
+  $("body").click(function(e){
+    var selectorClass = e.target.classList[0];
+    if( selectorClass === "overlay" || selectorClass === "btn-close" ){
+      $('.overlay').remove();
+      animate.reverse();
+      $('#modal').hide();
+    }
+    console.log(e.target.classList[0]);
+  })
+    </script>
 
-</div>
 </main>
 <!-- Footer -->
 
@@ -221,9 +318,38 @@ Copyright &copy; medicaid all rights reserved
 </div>
 </div>
 
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5ef319d04a7c6258179b3c84/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script--><!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5ef319d04a7c6258179b3c84/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+
 </footer>
 <!-- Footer -->
 
 <script src="/script.js"></script>
+<script src="Bookappform.js"></script>
 </body>   
 </html>       

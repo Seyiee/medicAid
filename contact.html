@@ -7,6 +7,54 @@
     <link rel="icon" href="./images/favicon.png">
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+    <style>
+
+      #modal{
+        position: fixed;
+        top: 150px;
+        z-index: 2;
+        width:80%;
+        max-width: 300px;
+        min-width: 300px;
+        height: 260px;
+        overflow: hidden;
+        background: #fff;
+        margin: 0 auto;
+        left:0;
+        right:0;
+        background-image: url(ft.png);
+        box-shadow:2px 4px 30px #000;
+        color:#fff;
+        font-family:arial;
+        display:none;
+        opacity:0;
+        transform: scale(0);
+      }
+      
+      
+      .btn-close{
+        padding-right: 10%;
+        position:absolute;
+        right:0;
+        cursor:pointer;
+        font-size:26px;
+        width:16px;
+        color: blue;
+      }
+      
+      .btn-open{
+        box-shadow:2px 2px 8px #aaa;
+      }
+      .overlay{
+        width:100%;
+        height:100%;
+        background:rgba(255,255,255,.8);
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1;
+      }
+          </style>
 </head>
 <body>
     
@@ -99,7 +147,7 @@
           
     <div id="error-message"></div>
     <div class="contact-form">
-      <form onsubmit="event.preventDefault(); validation()">
+      <form id="contactform">
         <div class="contact-form-content">
           <input type="text" id="name" placeholder="Enter your fullname">
         </div>
@@ -107,15 +155,43 @@
           <input id="email" type="text" placeholder="Email" >
         </div>
         <div class="contact-form-content">
-          <textarea  id="message" placeholder="Your Message"></textarea>
+          <textarea  id="messages" placeholder="Your Message"></textarea>
         </div>
         <div class="submit-btn">
-          <input type="submit" value="Send">
+          <input class="btn-open" type="submit" value="Send">
         </div>
     </form>
+    <div id="modal">
+      <div class="btn-close">x<div>
+    </div>
+    <!-- partial -->
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+    
+    <script>
+      var animate;
+    
+    $('.btn-open').on('click',function(e){
+      //e.stopImmediatePropagation();
+      $('body').append("<div class='overlay'></div>");
+      animate = TweenMax.to(modal,1,{autoAlpha:1,display:"block",scale:1})
+    });
+    
+    $("body").click(function(e){
+      var selectorClass = e.target.classList[0];
+      if( selectorClass === "overlay" || selectorClass === "btn-close" ){
+        $('.overlay').remove();
+        animate.reverse();
+        $('#modal').hide();
+      }
+      console.log(e.target.classList[0]);
+    })
+      </script>
     </div>
   </div>
   </section>
+  
   
   <!-- Footer -->
   
@@ -187,8 +263,37 @@
   </div>
   </div>
         
+
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5ef319d04a7c6258179b3c84/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script--><!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5ef319d04a7c6258179b3c84/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  
   </footer>
   <!-- Footer -->
   <script src="script.js"></script> 
+  <script src="contactform.js"></script>
   </body>
 </html>

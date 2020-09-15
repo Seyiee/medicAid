@@ -7,6 +7,53 @@
     <link rel="icon" href="./images/favicon.png">
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+    <style>
+
+#modal{
+  position: fixed;
+  top: 150px;
+  z-index: 2;
+  width:80%;
+  max-width: 300px;
+  min-width: 300px;
+  height: 260px;
+  overflow: hidden;
+  background: #fff;
+  margin: 0 auto;
+  left:0;
+  right:0;
+  background-image: url(ft.png);
+  box-shadow:2px 4px 30px #000;
+  color:#fff;
+  font-family:arial;
+  display:none;
+  opacity:0;
+  transform: scale(0);
+}
+
+.btn-close{
+  padding-right: 10%;
+  position:absolute;
+  right:0;
+  cursor:pointer;
+  font-size:26px;
+  width:16px;
+  color: blue;
+}
+
+.btn-open{
+  box-shadow:2px 2px 8px #aaa;
+}
+.overlay{
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,.8);
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+}
+    </style>
 </head>
 <body>
     
@@ -65,7 +112,7 @@
     
   <section>
   <div id="result">
-    <form onsubmit="">
+    <form id="requestResult" onsubmit="">
     <div class="result-header">
           <h2>Request Result</h2>
     </div>
@@ -79,33 +126,61 @@
     </div>
   <div class="registration-no">
       <p>Registration No</p>
-      <input type="text" id="registration-no" placeholder="" required>
+      <input type="text" id="regNo" placeholder="" required>
     </div>
   <div class="service">
       <p>Service</p>
       <select name="services" id="service" placeholder="" required>
               
-              <option value="">Radiology</option>
-              <option value="">Laboratory testing</option>
-              <option value="">Medical screening</option>
-              <option value="">Special consultation</option>
-              <option value="">Eclectrocardiogram</option>
-                                  <option value="">Computed Tomography Scan</option>
-                                  <option value="">Magnetic Resonance Imaging </option>
-                                  <option value="">Fluoroscopy</option>
-                                  <option value="">Ultrasound Scan</option>
-                                  <option value="">Echocardiogram</option>
-                                  <option value="">Endoscopy</option>
-                                  <option value="">Mammogram</option>
-                                  <option value="">PCR service</option>
-                                  <option value="">Wellness Clinic</option>
-                                  <option value="">Pre-marital Medical Screening</option>
+              <option value="Radiology">Radiology</option>
+              <option value="Laboratory testing">Laboratory testing</option>
+              <option value="Medical screening">Medical screening</option>
+              <option value="Special consultation">Special consultation</option>
+              <option value="Eclectrocardiogram">Eclectrocardiogram</option>
+                                  <option value="Computed Tomography Scan">Computed Tomography Scan</option>
+                                  <option value="Magnetic Resonance Imaging">Magnetic Resonance Imaging </option>
+                                  <option value="Fluoroscopy">Fluoroscopy</option>
+                                  <option value="Ultrasound Scan">Ultrasound Scan</option>
+                                  <option value="Echocardiogram">Echocardiogram</option>
+                                  <option value="Endoscopy">Endoscopy</option>
+                                  <option value="Mammogram">Mammogram</option>
+                                  <option value="PCR service">PCR service</option>
+                                  <option value="Wellness Clinic">Wellness Clinic</option>
+                                  <option value="Pre-marital Medical Screening">Pre-marital Medical Screening</option>
                               
                               </select>
                             </div>
-                            <div class="request-btn"><input type="submit" value="Send Request"></div>
+                            <div class="request-btn" ><input class="btn-open"  type="submit" onclick="myFunction()" value="Send Request"></div>
   </form>       
-  
+  <!-- partial:index.partial.html -->
+<!-- <button class="btn-open">Open Modal</button> -->
+<div id="modal">
+  <div class="btn-close">x<div>
+</div>
+<!-- partial -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+
+<script>
+  var animate;
+
+$('.btn-open').on('click',function(e){
+  //e.stopImmediatePropagation();
+  $('body').append("<div class='overlay'></div>");
+  animate = TweenMax.to(modal,1,{autoAlpha:1,display:"block",scale:1})
+});
+
+$("body").click(function(e){
+  var selectorClass = e.target.classList[0];
+  if( selectorClass === "overlay" || selectorClass === "btn-close" ){
+    $('.overlay').remove();
+    animate.reverse();
+    $('#modal').hide();
+  }
+  console.log(e.target.classList[0]);
+})
+  </script>
   </section>
   <!-- Footer -->
   
@@ -176,10 +251,42 @@
           Copyright &copy; medicaid all rights reserved 
   </div>
   </div>
+
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5ef319d04a7c6258179b3c84/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script--><!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5ef319d04a7c6258179b3c84/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+  
         
   </footer>
   <!-- Footer -->               
-  
+  <!-- <script>
+function myFunction() {
+  document.getElementById("myForm").reset();
+}
+</script> -->
   <script src="./script.js"></script>
+  <script src="Requestresultform.js"></script>
   </body>
 </html>             
