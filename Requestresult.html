@@ -118,19 +118,19 @@
     </div>
     <div class="name">
           <p>Name</p>
-          <input type="text" id="name" placeholder="" required>
+          <input type="text" id="name" placeholder="" class="required">
     </div>
     <div class="Email">
           <p>Email</p>
-          <input type="text" id="email" placeholder="" required>
+          <input type="text" id="email" placeholder="" class="required">
     </div>
   <div class="registration-no">
       <p>Registration No</p>
-      <input type="text" id="regNo" placeholder="" required>
+      <input type="text" id="regNo" placeholder="" class="required">
     </div>
   <div class="service">
       <p>Service</p>
-      <select name="services" id="service" placeholder="" required>
+      <select name="services" id="service" placeholder="" class="required">
               
               <option value="Radiology">Radiology</option>
               <option value="Laboratory testing">Laboratory testing</option>
@@ -150,7 +150,7 @@
                               
                               </select>
                             </div>
-                            <div class="request-btn" ><input class="btn-open"  type="submit" onclick="myFunction()" value="Send Request"></div>
+                            <div class="request-btn" > <input class="btn-open toggle-disabled" disabled type="submit" value="Send Request"> </div>
   </form>       
   <!-- partial:index.partial.html -->
 <!-- <button class="btn-open">Open Modal</button> -->
@@ -181,6 +181,27 @@ $("body").click(function(e){
   console.log(e.target.classList[0]);
 })
   </script>
+  <script>
+    $(document).on("change keyup", ".required", function (e) {
+  let Disabled = true;
+  $(".required").each(function () {
+    let value = this.value;
+    if (value && value.trim() != "") {
+      Disabled = false;
+    } else {
+      Disabled = true;
+      return false;
+    }
+  });
+
+  if (Disabled) {
+    $(".toggle-disabled").prop("disabled", true);
+  } else {
+    $(".toggle-disabled").prop("disabled", false);
+  }
+});
+
+    </script>
   </section>
   <!-- Footer -->
   
@@ -280,12 +301,7 @@ $("body").click(function(e){
   
         
   </footer>
-  <!-- Footer -->               
-  <!-- <script>
-function myFunction() {
-  document.getElementById("myForm").reset();
-}
-</script> -->
+  
   <script src="./script.js"></script>
   <script src="Requestresultform.js"></script>
   </body>

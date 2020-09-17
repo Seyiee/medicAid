@@ -302,10 +302,10 @@
        <form id="newsletterForm">
         <div id="error-message"></div>
         <div>
-          <input id="email" type="text" >
+          <input id="email" type="text" class="required">
         </div>
       <div>
-        <input class="btn-open" type="submit" value="Subscribe">
+        <input class="btn-open toggle-disabled" type="submit" value="Subscribe" disabled>
       </div>       
       </form>
 
@@ -336,6 +336,27 @@
         console.log(e.target.classList[0]);
       })
         </script>
+        <script>
+          $(document).on("change keyup", ".required", function (e) {
+            let Disabled = true;
+            $(".required").each(function () {
+              let value = this.value;
+              if (value && value.trim() != "") {
+                Disabled = false;
+              } else {
+                Disabled = true;
+                return false;
+              }
+            });
+          
+            if (Disabled) {
+              $(".toggle-disabled").prop("disabled", true);
+            } else {
+              $(".toggle-disabled").prop("disabled", false);
+            }
+          });
+          
+          </script>
   </div>
 </section>
 <!--Newsletter Section-->

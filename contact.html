@@ -149,16 +149,16 @@
     <div class="contact-form">
       <form id="contactform">
         <div class="contact-form-content">
-          <input type="text" id="name" placeholder="Enter your fullname">
+          <input type="text" id="name" class="required" placeholder="Enter your fullname">
         </div>
          <div class="contact-form-content">
-          <input id="email" type="text" placeholder="Email" >
+          <input id="email" type="text" class="required" placeholder="Email" >
         </div>
         <div class="contact-form-content">
-          <textarea  id="messages" placeholder="Your Message"></textarea>
+          <textarea  id="messages" class="required" placeholder="Your Message"></textarea>
         </div>
         <div class="submit-btn">
-          <input class="btn-open" type="submit" value="Send">
+          <input class="btn-open toggle-disabled" disabled type="submit" value="Send">
         </div>
     </form>
     <div id="modal">
@@ -188,6 +188,28 @@
       console.log(e.target.classList[0]);
     })
       </script>
+
+      <script>
+        $(document).on("change keyup", ".required", function (e) {
+  let Disabled = true;
+  $(".required").each(function () {
+    let value = this.value;
+    if (value && value.trim() != "") {
+      Disabled = false;
+    } else {
+      Disabled = true;
+      return false;
+    }
+  });
+
+  if (Disabled) {
+    $(".toggle-disabled").prop("disabled", true);
+  } else {
+    $(".toggle-disabled").prop("disabled", false);
+  }
+});
+
+        </script>
     </div>
   </div>
   </section>

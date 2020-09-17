@@ -125,23 +125,23 @@
 
       <div id="Patient-name" >
         
-        <input  type="text" id="ClientName" placeholder="Client Name" required>
+        <input  type="text" id="ClientName" class="required" placeholder="Client Name" required>
       </div>
 
 
       <div>
         
-        <input type="text" id="RegNo" placeholder="Registration No">
+        <input type="text" id="RegNo" class="required" placeholder="Registration No">
       </div>
 
       <div class="field-split form-row">
         <div class="field-align-left">
           
-          <input id="Phone" type="text" placeholder="Phone Number">
+          <input id="Phone" type="text" class="required" placeholder="Phone Number">
         
         </div>
           <div class="field-align-right">
-            <input id="email" type="text" placeholder="Email" required>
+            <input id="email" type="text" class="required" placeholder="Email" required>
           </div>
         
       </div>
@@ -209,12 +209,12 @@
       </div>
 
       <div id="date">
-        <input id="time" type="date" placeholder="dd/mm/yy" required>
+        <input id="time" type="date" class="required" placeholder="dd/mm/yy" required>
       </div>
       
      </div>
        <div>
-         <input class="btn-open" type="submit" value="BOOK APPOINTMENT">
+         <input class="btn-open toggle-disabled" type="submit" value="BOOK APPOINTMENT" disabled>
        </div>
 
   </form>
@@ -242,10 +242,31 @@
       $('.overlay').remove();
       animate.reverse();
       $('#modal').hide();
-    }
+    };
     console.log(e.target.classList[0]);
   })
     </script>
+    <script>
+$(document).on("change keyup", ".required", function (e) {
+  let Disabled = true;
+  $(".required").each(function () {
+    let value = this.value;
+    if (value && value.trim() != "") {
+      Disabled = false;
+    } else {
+      Disabled = true;
+      return false;
+    }
+  });
+
+  if (Disabled) {
+    $(".toggle-disabled").prop("disabled", true);
+  } else {
+    $(".toggle-disabled").prop("disabled", false);
+  }
+});
+
+      </script>
 
 </main>
 <!-- Footer -->
