@@ -461,8 +461,9 @@ nav ul ul li a{
  padding-bottom: 24px;
 }
 
-.home-services-item h5{
+.home-services-item h5 a{
   font-size: 16px;
+  color: #ffffff;
 }
 
 .home-services-item p{
