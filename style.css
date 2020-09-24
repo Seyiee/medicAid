@@ -160,7 +160,8 @@ nav:after{
 
 nav .logo{
     float: left;
-    margin-top: 10px;
+    margin-top: 12px;
+    
   }
 
   .logo img{
@@ -250,7 +251,7 @@ nav ul ul li a{
 .slideshowContainer {
   overflow: hidden;
   width: 100%;
-  height: 620px;
+  height: 520px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,13 +278,13 @@ nav ul ul li a{
 }
 
 .slide2{
-  background-image:linear-gradient(to right, rgba(66, 182, 248, 0.2),rgba(1, 51, 80, 0.4)), url('./images/lab.jpg');
+  background-image:linear-gradient(to right, rgba(66, 182, 248, 0.2),rgba(1, 51, 80, 0.4)), url('./images/IMG_7696.jpg');
   background-position: 80% 20%;
   background-size: cover;
 }
 
 .slide3{
-  background-image: linear-gradient(to right, rgba(66, 182, 248, 0.2),rgba(1, 51, 80, 0.4)), url('./images/IMG_7968.jpg') ;
+  background-image: linear-gradient(to right, rgba(66, 182, 248, 0.2),rgba(1, 51, 80, 0.4)), url('./images/IMG_7618.jpg') ;
   background-position: center;
   background-size: cover;
 }
@@ -331,7 +332,7 @@ nav ul ul li a{
   opacity: 1;
 }
 
-.slideshowArrow {
+/*.slideshowArrow {
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   transition: opacity 0.2s ease-in-out;
@@ -340,6 +341,7 @@ nav ul ul li a{
   width: 0;
   height: 0;
   border-style: solid;
+  
 }
 
 .slideshowArrow:hover {
@@ -347,24 +349,26 @@ nav ul ul li a{
 }
 
 #leftArrow {
-  border-width: 18px 24px 18px 0;
+  border-width: 14px 20px 14px 0;
   border-color: transparent #fff transparent transparent;
   left: 0;
   margin-left: 36px;
   transform: translate(-50%, -50%);
+  opacity:0.8;
 }
 
 #rightArrow {
-  border-width: 18px 0 18px 24px;
+  border-width: 14px 0 14px 20px;
   border-color: transparent  transparent transparent #fff;
   right: 0;
   margin-right: 36px;
   transform: translate(50%, -50%);
+  opacity:0.8;
 }
-
+*/
 .slideshowCircles {
   position: absolute;
-  bottom: 2%;
+  bottom: 4%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -908,7 +912,6 @@ padding: 6px 16px 0 32px;
 
 .success-story{
 min-height: 48vh;
-width: 100vw;
 background: #057AC0;
 display: flex;
 justify-content: center;
@@ -1960,8 +1963,10 @@ section#get-in-touch {
 }
 
 .footer-container .footer-link p{
-  font-size: 16px;
+  font-size: 14px;
   color: #f8f8f8;
+  padding-bottom: 12px;
+  font-weight: bold;
 }
 
 .footer-container .footer-link h3{
@@ -2018,8 +2023,17 @@ section#get-in-touch {
       
       }
       nav .logo{
-        padding-left: 24px;
-        width: 100%;
+       /* padding-left: 24px;
+        width: 100%;*/
+        border: 1px solid white; 
+        background-color: white; 
+        border-radius: 4px; 
+        /*padding: 2px;*/
+  	margin: 10px;
+      }
+      
+       .logo img{
+        width: 100px;
       }
       nav ul li,  nav ul ul li{
         display: block;
@@ -2057,7 +2071,7 @@ section#get-in-touch {
         color: #fff;
         position: absolute;
         right: 40px;
-        line-height: 70px;
+        line-height: 58px;
         font-size: 32px;
         cursor: pointer;
       }
@@ -2076,11 +2090,17 @@ nav ul li a:hover{
 
 .slideshowContainer .slide-content .arrow,
     .carousel-wrapper .carousel-item.light .arrow {
-      background-size: 10% 10%;
-      background-position: center;
-      width: 100px;
+       background-size: cover;
+      background-position: center center;
+      width: 100%;
       margin: 0 auto;
     }
+    
+    .slide1, .slide2, .slide3{
+     background-size: cover;
+      background-position: center center;
+      width: 100%;
+     }
     
     .slide-content p{
       font-size: 24px;
@@ -2100,4 +2120,3 @@ nav ul li a:hover{
 
 
     /* New styles */
-    
